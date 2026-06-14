@@ -1,4 +1,4 @@
-css * {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -8,6 +8,12 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #fff8fb;
     color: #333;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 /* HEADER */
@@ -248,33 +254,6 @@ footer {
     margin-top: 40px;
 }
 
-/* RESPONSIVE */
-
-@media(max-width:768px) {
-
-    .hero {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .hero-text {
-        width: 100%;
-    }
-
-    .hero-image img {
-        width: 100%;
-        height: auto;
-    }
-
-    .sweet-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .login-form,
-    .contact-form {
-        width: 90%;
-    }
-}
 .buy-btn {
     display: block;
     margin: 10px auto 15px;
@@ -289,4 +268,64 @@ footer {
 .buy-btn:hover {
     background-color: #ff4d94;
     color: white;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        padding: 15px;
+        gap: 10px;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    nav a {
+        margin-left: 0;
+        font-size: 16px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .hero-text {
+        width: 100%;
+    }
+
+    .hero-text h2 {
+        font-size: 30px;
+    }
+
+    .hero-image img {
+        width: 100%;
+        height: auto;
+    }
+
+    section {
+        padding: 30px 20px;
+    }
+
+    .sweet-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .login-form,
+    .contact-form {
+        width: 90%;
+    }
+
+    .offer-card {
+        width: 100%;
+        max-width: 300px;
+    }
 }
